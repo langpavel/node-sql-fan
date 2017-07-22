@@ -58,6 +58,7 @@
   },
   "scripts": {
     "lint": "eslint src test tools",
+    "flow": "flow check",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cover": "jest --coverage",
