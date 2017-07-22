@@ -5,12 +5,15 @@ node_js:
   - '6'
   - '5'
   - '4'
+install:
+  - npm install -g codecov
+  - npm install
 script:
   - npm run lint
   - npm run flow
   - npm run test:cover
 after_success:
-  - npm run coveralls
+  - codecov
 notifications:
   webhooks:
     urls:
