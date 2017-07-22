@@ -55,7 +55,7 @@ promise = promise.then(() => del(['dist/*']));
   );
 });
 
-// Copy package.json and LICENSE.txt
+// Copy package.json and LICENSE
 promise = promise.then(() => {
   delete pkg.private;
   delete pkg.devDependencies;
@@ -68,8 +68,8 @@ promise = promise.then(() => {
     'utf-8'
   );
   fs.writeFileSync(
-    'dist/LICENSE.txt',
-    fs.readFileSync('LICENSE.txt', 'utf-8'),
+    'dist/LICENSE',
+    fs.readFileSync('LICENSE', 'utf-8'),
     'utf-8'
   );
 });
